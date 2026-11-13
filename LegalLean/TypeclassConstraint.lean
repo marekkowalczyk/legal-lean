@@ -147,6 +147,14 @@ theorem formal_ne_boundary (P : Prop) (pf : P) (r : String) (a : Authority)
   intro h
   exact FormalisationBoundary.noConfusion rfl (heq_of_eq h)
 
+/-- THEOREM: `formal` and `rejected` are DISJOINT constructors.
+    A machine-verified positive outcome and an explicit rejection / inadmissibility
+    outcome are structurally distinct at the type level. -/
+theorem formal_ne_rejected (P : Prop) (pf : P) (r : String) (a : Option Authority)
+    : FormalisationBoundary.formal pf ≠ FormalisationBoundary.rejected r a := by
+  intro h
+  exact FormalisationBoundary.noConfusion rfl (heq_of_eq h)
+
 -- ============================================================
 -- §6  RequiresHumanDetermination is a MARKER, not a proof supplier
 -- ============================================================

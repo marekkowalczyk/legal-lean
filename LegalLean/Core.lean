@@ -15,6 +15,8 @@
   Compatible with Lean 4 v4.24.0 (Aristotle's version).
 -/
 
+import LegalLean.FormalResultAttr
+
 namespace LegalLean
 
 -- ============================================================
@@ -52,13 +54,37 @@ instance decLeDate (a b : Date) : Decidable (a ≤ b) :=
      (a.year = b.year ∧ a.month < b.month) ∨
      (a.year = b.year ∧ a.month = b.month ∧ a.day ≤ b.day)))
 
+/-- Decidability of strict `Date` comparison (`a < b`). -/
+instance decLtDate (a b : Date) : Decidable (a < b) :=
+  inferInstanceAs (Decidable
+    (a.year < b.year ∨
+     (a.year = b.year ∧ a.month < b.month) ∨
+     (a.year = b.year ∧ a.month = b.month ∧ a.day < b.day)))
+
 -- ============================================================
--- Authority: typed enumeration of adjudicatory authorities
+-- Jurisdiction & Authority: typed enumeration of adjudicatory bodies
 -- ============================================================
 
+/-- Legal jurisdiction of an adjudicatory authority or rule corpus. -/
+inductive Jurisdiction where
+  /-- United States federal jurisdiction. -/
+  | us              : Jurisdiction
+  /-- Commonwealth of Australia jurisdiction. -/
+  | au              : Jurisdiction
+  /-- Republic of Poland (Rzeczpospolita Polska). -/
+  | pl              : Jurisdiction
+  /-- Council of Europe / European Convention on Human Rights (ECHR). -/
+  | councilOfEurope : Jurisdiction
+  /-- European Union. -/
+  | eu              : Jurisdiction
+  /-- Other or user-specified jurisdiction code (e.g. ISO 3166-1 alpha-2). -/
+  | other (code : String) : Jurisdiction
+  deriving Repr, BEq, DecidableEq, Inhabited
+
 /-- The adjudicatory authorities referenced across the case studies.
-    Replacing magic strings with a closed inductive eliminates typos and
-    makes authority references machine-checkable. -/
+    Includes US, Australian, Polish, and European bodies, plus extensible
+    constructors (`other`, `withJurisdiction`) so non-US courts and tribunals
+    can be named without proxy mappings. -/
 inductive Authority where
   /-- Internal Revenue Service (US federal tax authority). -/
   | irs          : Authority
@@ -80,7 +106,69 @@ inductive Authority where
   | providerAcccc : Authority
   /-- Provider initial determination, reviewable by ACCC. -/
   | providerAcccc2 : Authority
+  /-- Sąd Najwyższy (SN) — Supreme Court of Poland. -/
+  | sadNajwyzszy : Authority
+  /-- Trybunał Konstytucyjny (TK) — Constitutional Tribunal of Poland. -/
+  | trybunalKonstytucyjny : Authority
+  /-- Naczelny Sąd Administracyjny (NSA) — Supreme Administrative Court of Poland. -/
+  | naczelnySadAdministracyjny : Authority
+  /-- Sąd apelacyjny — Polish Court of Appeal. -/
+  | sadApelacyjny : Authority
+  /-- Sąd okręgowy — Polish Regional Court. -/
+  | sadOkregowy : Authority
+  /-- Sąd rejonowy — Polish District Court. -/
+  | sadRejonowy : Authority
+  /-- European Court of Human Rights (ECtHR / ETPCz). -/
+  | ecthr : Authority
+  /-- Extensible constructor for any other named adjudicatory body. -/
+  | other (name : String) : Authority
+  /-- Extensible constructor pairing an explicit jurisdiction with an authority name. -/
+  | withJurisdiction (jurisdiction : Jurisdiction) (name : String) : Authority
   deriving Repr, BEq, DecidableEq, Inhabited
+
+/-- Abbreviation for `Authority.sadNajwyzszy` (Sąd Najwyższy — SN). -/
+abbrev Authority.sn : Authority := .sadNajwyzszy
+
+/-- Abbreviation for `Authority.trybunalKonstytucyjny` (Trybunał Konstytucyjny — TK). -/
+abbrev Authority.tk : Authority := .trybunalKonstytucyjny
+
+/-- Abbreviation for `Authority.naczelnySadAdministracyjny` (Naczelny Sąd Administracyjny — NSA). -/
+abbrev Authority.nsa : Authority := .naczelnySadAdministracyjny
+
+/-- Abbreviation for `Authority.ecthr` (Europejski Trybunał Praw Człowieka — ETPCz). -/
+abbrev Authority.etpcz : Authority := .ecthr
+
+/-- Return the legal jurisdiction associated with an `Authority`. -/
+def Authority.jurisdiction : Authority → Jurisdiction
+  | .irs | .taxCourt | .irsTaxCourt | .uscis => .us
+  | .accc | .tio | .acccTio | .acccTioCourt | .providerAcccc | .providerAcccc2 => .au
+  | .sadNajwyzszy | .trybunalKonstytucyjny | .naczelnySadAdministracyjny
+  | .sadApelacyjny | .sadOkregowy | .sadRejonowy => .pl
+  | .ecthr => .councilOfEurope
+  | .other name => .other name
+  | .withJurisdiction j _ => j
+
+/-- Human-readable display name for an `Authority`. -/
+def Authority.displayName : Authority → String
+  | .irs                        => "Internal Revenue Service (IRS)"
+  | .taxCourt                   => "U.S. Tax Court"
+  | .irsTaxCourt                => "IRS / U.S. Tax Court"
+  | .uscis                      => "U.S. Citizenship and Immigration Services (USCIS)"
+  | .accc                       => "Australian Competition and Consumer Commission (ACCC)"
+  | .tio                        => "Telecommunications Industry Ombudsman (TIO)"
+  | .acccTio                    => "ACCC / TIO"
+  | .acccTioCourt               => "ACCC / TIO / Court"
+  | .providerAcccc              => "Provider (subject to ACCC audit)"
+  | .providerAcccc2             => "Provider (reviewable by ACCC)"
+  | .sadNajwyzszy               => "Sąd Najwyższy (SN)"
+  | .trybunalKonstytucyjny      => "Trybunał Konstytucyjny (TK)"
+  | .naczelnySadAdministracyjny => "Naczelny Sąd Administracyjny (NSA)"
+  | .sadApelacyjny              => "Sąd Apelacyjny"
+  | .sadOkregowy                => "Sąd Okręgowy"
+  | .sadRejonowy                => "Sąd Rejonowy"
+  | .ecthr                      => "European Court of Human Rights (ECtHR)"
+  | .other name                 => name
+  | .withJurisdiction _ name    => name
 
 -- ============================================================
 -- Deontic modalities
@@ -120,6 +208,36 @@ structure LegalRule (α : Type) where
       prohibition is only applicable when `year >= 2018`. -/
   applicable : α → Bool := fun _ => true
 
+/-- Epistemic provenance of legal evidence: distinguishes evidence verified
+    against an authoritative primary source or official registry from
+    party- or owner-asserted claims. -/
+inductive Provenance where
+  /-- Verified directly against an authoritative source (statute, official court
+      register, certified postal receipt / EPO, notarised deed). -/
+  | verifiedAgainstSource : Provenance
+  /-- Asserted by a party, applicant, or control owner without independent
+      verification against the primary record (default for backward compatibility). -/
+  | partyAsserted         : Provenance
+  /-- Stipulated or undisputed between the parties (e.g. Art. 229–230 k.p.c.). -/
+  | stipulated            : Provenance
+  /-- Officially noticed by the court or authority ex officio (Art. 228 k.p.c.). -/
+  | officialNotice        : Provenance
+  deriving Repr, BEq, DecidableEq, Inhabited
+
+/-- Alias for `Provenance.verifiedAgainstSource`. -/
+abbrev Provenance.verified : Provenance := .verifiedAgainstSource
+
+/-- Alias for `Provenance.partyAsserted` (owner-asserted in compliance contexts). -/
+abbrev Provenance.ownerAsserted : Provenance := .partyAsserted
+
+/-- Whether a `Provenance` value represents independently verified evidence
+    (verified against source or officially noticed ex officio). -/
+def Provenance.isVerified : Provenance → Bool
+  | .verifiedAgainstSource => true
+  | .officialNotice        => true
+  | .partyAsserted         => false
+  | .stipulated            => false
+
 /-- Evidence for a legal proposition.
     Propositions-as-types: if you can construct an `EvidenceFor P`,
     then P is established (subject to defeasibility).
@@ -130,6 +248,42 @@ structure EvidenceFor (P : Prop) where
   artifact : Option String  -- reference to supporting document/record
   /-- The actual proof witness. -/
   witness : P
+  /-- Epistemic verification status of the evidence.
+      Defaults to `.partyAsserted` (matching legacy behaviour) so existing
+      code keeps compiling without changes. -/
+  provenance : Provenance := .partyAsserted
+
+/-- Smart constructor for source-verified evidence (`Provenance.verifiedAgainstSource`). -/
+def EvidenceFor.verified {P : Prop} (source : String) (artifact : Option String) (witness : P)
+    : EvidenceFor P :=
+  { source, artifact, witness, provenance := .verifiedAgainstSource }
+
+/-- Smart constructor for party/owner-asserted evidence (`Provenance.partyAsserted`). -/
+def EvidenceFor.asserted {P : Prop} (source : String) (artifact : Option String) (witness : P)
+    : EvidenceFor P :=
+  { source, artifact, witness, provenance := .partyAsserted }
+
+/-- Check whether `EvidenceFor P` has independent source or official verification. -/
+def EvidenceFor.isVerified {P : Prop} (e : EvidenceFor P) : Bool :=
+  e.provenance.isVerified
+
+/-- Default `EvidenceFor` construction has `.partyAsserted` provenance. -/
+theorem EvidenceFor.default_provenance_eq_partyAsserted {P : Prop}
+    (s : String) (a : Option String) (w : P) :
+    ({ source := s, artifact := a, witness := w : EvidenceFor P }).provenance = .partyAsserted :=
+  rfl
+
+/-- `EvidenceFor.verified` produces verified evidence. -/
+theorem EvidenceFor.verified_isVerified {P : Prop}
+    (s : String) (a : Option String) (w : P) :
+    (EvidenceFor.verified s a w).isVerified = true :=
+  rfl
+
+/-- `EvidenceFor.asserted` produces unverified (party-asserted) evidence. -/
+theorem EvidenceFor.asserted_not_isVerified {P : Prop}
+    (s : String) (a : Option String) (w : P) :
+    (EvidenceFor.asserted s a w).isVerified = false :=
+  rfl
 
 /-
   FormalisationBoundary — The intellectually novel contribution.
@@ -169,14 +323,51 @@ class Discretionary (P : Prop) extends RequiresHumanDetermination P where
   constraints : List String
 
 /-- The formalisation boundary itself: wraps a proposition with metadata
-    about whether it is fully formalisable, vague, or discretionary. -/
+    about whether it is fully formalisable, rejected/inadmissible, vague, or discretionary. -/
 inductive FormalisationBoundary (P : Sort _) where
   /-- Fully formalisable: can be verified by the type checker alone. -/
   | formal (proof : P) : FormalisationBoundary P
+  /-- Explicitly rejected or inadmissible on formal/procedural grounds
+      (e.g. odrzucenie pozwu / apelacji / skargi), replacing the legacy
+      `FormalisationBoundary.formal False` encoding. -/
+  | rejected (reason : String) (authority : Option Authority := none) : FormalisationBoundary P
   /-- Requires human determination: annotated with why and which authority. -/
   | boundary (reason : String) (authority : Authority) : FormalisationBoundary P
   /-- Mixed: partially formal, partially human. The `formalPart` is verified;
       the `humanPart` is annotated. -/
   | mixed (formalPart : String) (humanPart : String) : FormalisationBoundary P
+
+/-- Alias for `FormalisationBoundary.rejected` representing procedural inadmissibility
+    (e.g. odrzucenie pisma / środka zaskarżenia). -/
+abbrev FormalisationBoundary.inadmissible {P : Sort _}
+    (reason : String) (authority : Option Authority := none) : FormalisationBoundary P :=
+  FormalisationBoundary.rejected reason authority
+
+/-- Proof-carrying outcome for a legal proposition `P : Prop`.
+    Unlike `FormalisationBoundary.formal False` (which only type-checks when the
+    parameter is `Prop` rather than a specific proposition `P`),
+    `LegalOutcome.rejected` carries an explicit refutation `¬P` verified by the
+    Lean 4 kernel alongside the rejection reason and optional adjudicating authority. -/
+inductive LegalOutcome (P : Prop) where
+  /-- Proposition `P` is formally established with proof `proof : P`. -/
+  | sustained (proof : P) : LegalOutcome P
+  /-- Proposition `P` is formally refuted / rejected / inadmissible with `refutation : ¬P`. -/
+  | rejected (reason : String) (refutation : ¬P) (authority : Option Authority := none) : LegalOutcome P
+  /-- Open texture or discretion: requires human determination by `authority`. -/
+  | boundary (reason : String) (authority : Authority) : LegalOutcome P
+  /-- Partially formal, partially human-determined. -/
+  | mixed (formalPart : String) (humanPart : String) : LegalOutcome P
+
+/-- Alias for `LegalOutcome.rejected` emphasizing procedural inadmissibility. -/
+abbrev LegalOutcome.inadmissible {P : Prop}
+    (reason : String) (refutation : ¬P) (authority : Option Authority := none) : LegalOutcome P :=
+  LegalOutcome.rejected reason refutation authority
+
+/-- Project a `LegalOutcome P` to `FormalisationBoundary P`. -/
+def LegalOutcome.toBoundary {P : Prop} : LegalOutcome P → FormalisationBoundary P
+  | .sustained pf      => .formal pf
+  | .rejected r _ auth => .rejected r auth
+  | .boundary r auth   => .boundary r auth
+  | .mixed fp hp       => .mixed fp hp
 
 end LegalLean

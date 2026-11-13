@@ -64,8 +64,24 @@ def lowerAuthority (actorName : String) : Authority :=
     .uscis
   else if strHas actorName "ACCC" then
     .accc
+  else if strHas actorName "TIO" then
+    .tio
+  else if strHas actorName "Sąd Najwyższy" || strHas actorName "Sad Najwyzszy" || actorName == "SN" then
+    .sadNajwyzszy
+  else if strHas actorName "Trybunał Konstytucyjny" || strHas actorName "Trybunal Konstytucyjny" || actorName == "TK" then
+    .trybunalKonstytucyjny
+  else if strHas actorName "Naczelny Sąd Administracyjny" || strHas actorName "Naczelny Sad Administracyjny" || actorName == "NSA" then
+    .naczelnySadAdministracyjny
+  else if strHas actorName "Sąd Apelacyjny" || strHas actorName "sąd apelacyjny" || strHas actorName "Sad Apelacyjny" || strHas actorName "sad apelacyjny" then
+    .sadApelacyjny
+  else if strHas actorName "Sąd Okręgowy" || strHas actorName "sąd okręgowy" || strHas actorName "Sad Okregowy" || strHas actorName "sad okregowy" then
+    .sadOkregowy
+  else if strHas actorName "Sąd Rejonowy" || strHas actorName "sąd rejonowy" || strHas actorName "Sad Rejonowy" || strHas actorName "sad rejonowy" then
+    .sadRejonowy
+  else if strHas actorName "ECtHR" || strHas actorName "ETPCz" || strHas actorName "European Court of Human Rights" then
+    .ecthr
   else
-    .irs  -- conservative default
+    .irs  -- conservative default for legacy IRC clauses
 
 -- ============================================================
 -- Priority lowering
