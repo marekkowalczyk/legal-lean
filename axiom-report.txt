@@ -1,0 +1,468 @@
+# LegalLean Axiom Guard Report
+Targets: LegalLean
+Allowed standard axioms for formal results: propext, Classical.choice, Quot.sound
+Total declarations audited: 418
+Formal results audited:     37
+Violations detected:        0
+========================================================================
+
+## 1. Formal Result Declarations (strict standard-3 axiom check)
+------------------------------------------------------------------------
+[PASS] [LegalLean.Solver] (def) [formal-usage] 'LegalLean.solve' depends on axioms: [propext]
+[PASS] [LegalLean.Solver] (theorem) [formal-usage] 'LegalLean.solve_single_undefeated_rule_is_formal' depends on axioms: [propext, Quot.sound]
+[PASS] [LegalLean.Solver] (theorem) [formal-usage] 'LegalLean.solve_formal_implies_nonempty_undefeated' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.IRC163h] (theorem) [formal-usage] 'LegalLean.CaseStudies.IRC163h.unsecured_never_deducts' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.IRC163h] (def) [formal-usage] 'LegalLean.CaseStudies.IRC163h.isDeductible' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.IRC163h] (theorem) [formal-usage] 'LegalLean.CaseStudies.IRC163h.tcja_prohibits_home_equity' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.IRC163h] (theorem) [formal-usage] 'LegalLean.CaseStudies.IRC163h.non_individual_never_deducts' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.IRC163h] (def) [formal-usage] 'LegalLean.CaseStudies.IRC163h.isAcquisitionIndebtedness' does not depend on any axioms
+[PASS] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) [formal-usage] 'Theorems.monotonicity_break_tcja' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) [formal-usage] 'Theorems.pre_tcja_not_auto_rejected' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) [formal-usage] 'Theorems.boundary_authority_is_irs_tax_court' depends on axioms: [propext, Quot.sound]
+[PASS] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) [formal-usage] 'Theorems.no_mixed_outcomes' depends on axioms: [propext, Quot.sound]
+[PASS] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) [formal-usage] 'Theorems.monotonicity_break_general' depends on axioms: [propext, Quot.sound]
+[PASS] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) [formal-usage] 'Theorems.auto_reject_conditions' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.TCPCode] (theorem) [formal-usage] 'LegalLean.CaseStudies.TCPCode.non_consumer_contract_outside_cis_scope' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.TCPCode] (theorem) [formal-usage] 'LegalLean.CaseStudies.TCPCode.all_exemptions_yield_boundary' depends on axioms: [propext, Quot.sound]
+[PASS] [LegalLean.CaseStudies.TCPCode] (theorem) [formal-usage] 'LegalLean.CaseStudies.TCPCode.unlicensed_provider_not_subject_to_tcp' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.TCPCode] (theorem) [formal-usage] 'LegalLean.CaseStudies.TCPCode.small_provider_not_in_obligation_path' depends on axioms: [propext, Quot.sound]
+[PASS] [LegalLean.CaseStudies.TCPCode] (def) [formal-usage] 'LegalLean.CaseStudies.TCPCode.assessContactCompliance' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.TCPCode] (theorem) [formal-usage] 'LegalLean.CaseStudies.TCPCode.non_compliant_cis_format_is_formal_failure' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.TCPCode] (def) [formal-usage] 'LegalLean.CaseStudies.TCPCode.assessCISCompliance' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.TCPCode] (theorem) [formal-usage] 'LegalLean.CaseStudies.TCPCode.small_provider_exemption_defeats_obligation' depends on axioms: [propext, Quot.sound]
+[PASS] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) @[formal_result] 'LegalLean.CaseStudies.PL.CivilProcedure.hypTimelyEomFiling_deadline_eq_feb28' does not depend on any axioms
+[PASS] [LegalLean.CaseStudies.PL.CivilProcedure] (def) [formal-usage] 'LegalLean.CaseStudies.PL.CivilProcedure.evaluateFilingOutcome' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) @[formal_result] 'LegalLean.CaseStudies.PL.CivilProcedure.restoration_motion_shifts_rejected_to_boundary' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) @[formal_result] 'LegalLean.CaseStudies.PL.CivilProcedure.hypTimelyEomFiling_is_formal' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) @[formal_result] 'LegalLean.CaseStudies.PL.CivilProcedure.hypLateFilingNoRestoration_is_rejected' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) @[formal_result] 'LegalLean.CaseStudies.PL.CivilProcedure.party_asserted_provenance_yields_boundary' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) @[formal_result] 'LegalLean.CaseStudies.PL.CivilProcedure.polish_authorities_have_pl_jurisdiction' does not depend on any axioms
+[PASS] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) @[formal_result] 'LegalLean.CaseStudies.PL.CivilProcedure.defeat_graph_acyclic' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) @[formal_result] 'LegalLean.CaseStudies.PL.CivilProcedure.general_late_without_restoration_is_rejected' depends on axioms: [propext, Quot.sound]
+[PASS] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) @[formal_result] 'LegalLean.CaseStudies.PL.CivilProcedure.general_timely_verified_is_formal' depends on axioms: [propext]
+[PASS] [LegalLean.CaseStudies.PL.CivilProcedure] (def) [formal-usage] 'LegalLean.CaseStudies.PL.CivilProcedure.mkVerifiedTimelinessEvidence' depends on axioms: [propext]
+[PASS] [LegalLean.TypeclassConstraint] (theorem) [formal-usage] 'TypeclassConstraint.formal_ne_rejected' does not depend on any axioms
+[PASS] [LegalLean.TypeclassConstraint] (def) [formal-usage] 'TypeclassConstraint.trueIsFormallyDischargeable' does not depend on any axioms
+[PASS] [LegalLean.TypeclassConstraint] (theorem) [formal-usage] 'TypeclassConstraint.formal_carries_real_proof' does not depend on any axioms
+[PASS] [LegalLean.TypeclassConstraint] (theorem) [formal-usage] 'TypeclassConstraint.formal_ne_boundary' does not depend on any axioms
+
+## 2. All Audited Declarations (#print axioms per declaration)
+------------------------------------------------------------------------
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Date.month' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Provenance.isVerified' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.LegalRule.applicable' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.FormalisationBoundary.inadmissible' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Vague.penumbra' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Discretionary.toRequiresHumanDetermination' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.instDecidableEqJurisdiction.decEq' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Authority.jurisdiction' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.instInhabitedAuthority.default' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.LegalRule.priority' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Vague.toRequiresHumanDetermination' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.EvidenceFor.source' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.EvidenceFor.asserted' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.EvidenceFor.isVerified' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (theorem) 'LegalLean.EvidenceFor.default_provenance_eq_partyAsserted' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.LegalRule.description' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.LegalOutcome.toBoundary' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.EvidenceFor.artifact' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (theorem) 'LegalLean.EvidenceFor.asserted_not_isVerified' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Date.day' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Priority.source' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.instLTDate' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Discretionary.constraints' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.instLEDate' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Vague.core' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Authority.nsa' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Authority.displayName' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.EvidenceFor.provenance' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.instInhabitedJurisdiction.default' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.instInhabitedProvenance.default' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.instDecidableEqAuthority.decEq' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (theorem) 'LegalLean.EvidenceFor.witness' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.instInhabitedDeontic.default' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Authority.etpcz' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.decLtDate' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.decLeDate' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.instDecidableEqDate.decEq' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Date.year' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.LegalRule.defeatedBy' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Discretionary.scope' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Authority.sn' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Provenance.verified' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.LegalRule.modality' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (theorem) 'LegalLean.EvidenceFor.verified_isVerified' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Provenance.ownerAsserted' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.RequiresHumanDetermination.reason' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.EvidenceFor.verified' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.RequiresHumanDetermination.authority' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.LegalRule.id' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.LegalRule.conclusion' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.LegalOutcome.inadmissible' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Authority.tk' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Core] (def) 'LegalLean.Priority.level' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (def) 'LegalLean.Date.withinMonthsDeadline' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.addMonths_day_pos' depends on axioms: [Classical.choice, propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.Time] (def) 'LegalLean.Date.instOrd' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.lt_irrefl' depends on axioms: [propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.lt_trans' depends on axioms: [propext, Classical.choice, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.le_trans' depends on axioms: [propext, Classical.choice, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.Time] (def) 'LegalLean.Date.isValid' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.le_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.addMonths_jan31_nonleap' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.le_antisymm' depends on axioms: [propext, Classical.choice, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.daysInMonth_bounds' depends on axioms: [Classical.choice, propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.le_def' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.addMonths_aug31_six_months' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.lt_addMonths_of_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.le_refl' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.Time] (def) 'LegalLean.Date.addYears' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.addMonths_jan31_leap' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (def) 'LegalLean.Date.daysInMonth' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.le_of_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.Time] (def) 'LegalLean.Date.addMonths' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.addMonths_aug31_leap_six_months' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.le_addMonths' depends on axioms: [propext, Quot.sound, Classical.choice]
+[PASS] [NON-FORMAL] [LegalLean.Time] (def) 'LegalLean.Date.withinDeadline' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.addMonths_day_le_daysInMonth' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.Time] (def) 'LegalLean.Date.compare' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.not_lt_iff_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.Time] (def) 'LegalLean.Date.instToString' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.addMonths_zero' depends on axioms: [propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.Time] (def) 'LegalLean.Date.toISO8601' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.Time] (def) 'LegalLean.CalendarDate' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (def) 'LegalLean.Date.isLeapYear' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (def) 'LegalLean.Date.deadlineAfterMonths' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.not_le_iff_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.lt_def' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.addMonths_month_bounds' depends on axioms: [Classical.choice, propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.addMonths_isValid' depends on axioms: [Classical.choice, propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.Time] (theorem) 'LegalLean.Date.addMonths_mar31_six_months' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Defeasible] (def) 'LegalLean.Defeats.reason' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Defeasible] (def) 'LegalLean.Defeats.defeated' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Defeasible] (def) 'LegalLean.DefeasiblyHolds.defeated' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Defeasible] (def) 'LegalLean.DefaultRule.consequent' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Defeasible] (def) 'LegalLean.DefeasiblyHolds.holds' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Defeasible] (def) 'LegalLean.DefaultRule.justification' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Defeasible] (def) 'LegalLean.DefeasiblyHolds.supportingRule' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Defeasible] (def) 'LegalLean.DefeasiblyHolds.potentialDefeaters' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Defeasible] (def) 'LegalLean.DefaultRule.id' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Defeasible] (def) 'LegalLean.Defeats.strict' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Defeasible] (def) 'LegalLean.Defeats.defeater' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Defeasible] (def) 'LegalLean.DefaultRule.priority' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Defeasible] (def) 'LegalLean.DefaultRule.prerequisite' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Defeasible] (def) 'LegalLean.DefeasiblyHolds.evidence' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Solver] (theorem) 'LegalLean.isDefeated_monotone_in_rules' depends on axioms: [propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.Solver] (theorem) 'LegalLean.solve_is_deterministic' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.Solver] (def) 'LegalLean.isDefeated' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.Solver] (def) 'LegalLean.solve' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.Solver] (def) 'LegalLean.allSamePriority' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.Solver] (theorem) 'LegalLean.solve_single_undefeated_rule_is_formal' depends on axioms: [propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.Solver] (theorem) 'LegalLean.solve_empty_corpus_is_boundary' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.Solver] (def) 'LegalLean.maxPriorityRule' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.Solver] (theorem) 'LegalLean.isDefeated_false_of_empty_defeatedBy' depends on axioms: [Quot.sound, propext]
+[PASS] [FORMAL] [LegalLean.Solver] (theorem) 'LegalLean.solve_formal_implies_nonempty_undefeated' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.Solver] (def) 'LegalLean.undefeatedRules' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.instInhabitedActorKind.default' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.ExceptionStructure.allRefs' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.sourceRef' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.modality' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.definitions' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Actor.sourceText' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Actor.kind' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.subject' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.IRDocument.provisions' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.ExceptionRef.clauseId' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.IRDocument.sourceRef' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.sourceText' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Actor.id' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.temporalConstraint' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Negation.normalise' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.exceptionStructure' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.vaguenessMarker' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.id' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Modality.toDeontic' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.object' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.negation' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.crossRefs' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.instInhabitedTemporalTense.default' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.instInhabitedVoice.default' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.IRDocument.title' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.IRDocument.formalisabilityRatio' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Provision.title' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Actor.name' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.voice' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.instInhabitedNegation.default' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.priority' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Provision.id' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.temporalTense' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.instInhabitedModality.default' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.predicate' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Clause.threshold' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.Provision.clauses' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.IR.Legal] (def) 'LegalLean.IR.ExceptionRef.description' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (axiom) 'LegalLean.CaseStudies.IRC163h.MixedUseAllocation' depends on axioms: [LegalLean.CaseStudies.IRC163h.MixedUseAllocation]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.defeat_E1_2_R1' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (axiom) 'LegalLean.CaseStudies.IRC163h.IsQualifiedResidence' depends on axioms: [LegalLean.CaseStudies.IRC163h.IsQualifiedResidence]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.instDiscretionaryMixedUseAllocation' depends on axioms: [LegalLean.CaseStudies.IRC163h.MixedUseAllocation, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.InterestPayment.indebtedness' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.securedByResidence' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.InterestPayment.amount' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.defeat_R2_R1' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.defeat_R3_E1_1' depends on axioms: [propext]
+[PASS] [FORMAL] [LegalLean.CaseStudies.IRC163h] (theorem) 'LegalLean.CaseStudies.IRC163h.unsecured_never_deducts' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.Indebtedness.dateIncurred' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.postTCJA' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.preTRA87' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (axiom) 'LegalLean.CaseStudies.IRC163h.IsSubstantialImprovement' depends on axioms: [LegalLean.CaseStudies.IRC163h.IsSubstantialImprovement]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.Indebtedness.amount' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.withinAcquisitionLimit' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.instVagueIsQualifiedResidence' depends on axioms: [LegalLean.CaseStudies.IRC163h.IsQualifiedResidence, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.paidDuringTaxYear' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.homeEquityLimit' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.acquisitionLimit' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.TaxYear.year' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.R3_GrandfatherRule' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.Indebtedness.purpose' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.isHomeEquityIndebtedness' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.InterestPayment.taxYear' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.InterestPayment.paidByIndividual' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.isIndividualTaxpayer' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.instInhabitedFilingStatus.default' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.allDefeats' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.R2_TCJAProhibition' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.Cents' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.R1_BaseDeduction' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.Indebtedness.id' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.instDecidableEqTaxYear.decEq' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.Indebtedness.residenceType' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.isDeductible' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.instVagueIsSubstantialImprovement' depends on axioms: [LegalLean.CaseStudies.IRC163h.IsSubstantialImprovement, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.withinHomeEquityLimit' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.Indebtedness.securedByResidence' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.CaseStudies.IRC163h] (theorem) 'LegalLean.CaseStudies.IRC163h.tcja_prohibits_home_equity' depends on axioms: [propext]
+[PASS] [FORMAL] [LegalLean.CaseStudies.IRC163h] (theorem) 'LegalLean.CaseStudies.IRC163h.non_individual_never_deducts' depends on axioms: [propext]
+[PASS] [FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.isAcquisitionIndebtedness' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h] (def) 'LegalLean.CaseStudies.IRC163h.defeat_E1_1_R1' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) 'Theorems.grandfather_does_not_directly_defeat_base' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) 'Theorems.defeat_direct_acyclicity' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) 'Theorems.R1_R2_deontic_conflict' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) 'Theorems.defeat_chain_exists' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) 'Theorems.all_rules_are_permissions_or_prohibitions' depends on axioms: [propext]
+[PASS] [FORMAL] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) 'Theorems.monotonicity_break_tcja' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) 'Theorems.pre_tcja_no_prohibition' depends on axioms: [propext, Quot.sound]
+[PASS] [FORMAL] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) 'Theorems.pre_tcja_not_auto_rejected' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h.Theorems] (def) 'Theorems.sampleHomeEquityDebt' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) 'Theorems.boundary_authority_is_irs_tax_court' depends on axioms: [propext, Quot.sound]
+[PASS] [FORMAL] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) 'Theorems.no_mixed_outcomes' depends on axioms: [propext, Quot.sound]
+[PASS] [FORMAL] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) 'Theorems.monotonicity_break_general' depends on axioms: [propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h.Theorems] (def) 'Theorems.samplePayment' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.CaseStudies.IRC163h.Theorems] (theorem) 'Theorems.auto_reject_conditions' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.IRC163h.Theorems] (def) 'Theorems.isMixedOutcome' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.hasScholarlyArticle' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.hasMediaCoverage' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.vague_award' depends on axioms: [LegalLean.CaseStudies.O1Visa.AwardIsRecognised, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (theorem) 'LegalLean.CaseStudies.O1Visa.MeetsThreeCriteria.distinct' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (axiom) 'LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.defeat_ComparableEvidence_Standard' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (axiom) 'LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.R1_O1A_BaseEligibility' depends on axioms: [propext, LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (axiom) 'LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (axiom) 'LegalLean.CaseStudies.O1Visa.RoleIsCriticalAtDistinguished' depends on axioms: [LegalLean.CaseStudies.O1Visa.RoleIsCriticalAtDistinguished]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (theorem) 'LegalLean.CaseStudies.O1Visa.no_witness_below_three' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh, propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (axiom) 'LegalLean.CaseStudies.O1Visa.AssociationRequiresOutstanding' depends on axioms: [LegalLean.CaseStudies.O1Visa.AssociationRequiresOutstanding]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.determineEligibility' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.Publication.id' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (theorem) 'LegalLean.CaseStudies.O1Visa.three_criteria_lower_bound' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.Award.isRecordedAsRecognised' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.criterionProp' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.MeetsThreeCriteria.satisfied' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.disc_membership' depends on axioms: [LegalLean.CaseStudies.O1Visa.AssociationRequiresOutstanding, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.vague_salary' depends on axioms: [LegalLean.CaseStudies.O1Visa.SalaryIsHigh, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (theorem) 'LegalLean.CaseStudies.O1Visa.majorAward_ne_mediaCoverage' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.Applicant.id' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (theorem) 'LegalLean.CaseStudies.O1Visa.majorAward_ne_membership' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.MeetsBaseEligibility' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (axiom) 'LegalLean.CaseStudies.O1Visa.ContributionsAreMajor' depends on axioms: [LegalLean.CaseStudies.O1Visa.ContributionsAreMajor]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (theorem) 'LegalLean.CaseStudies.O1Visa.comparable_evidence_changes_pathway' depends on axioms: [propext, LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh, LegalLean.CaseStudies.O1Visa.ComparableEvidenceApplies]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.vague_extraordinary' depends on axioms: [LegalLean.CaseStudies.O1Visa.HasExtraordinaryAbility, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (theorem) 'LegalLean.CaseStudies.O1Visa.nodup_pair_implies_ne' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (theorem) 'LegalLean.CaseStudies.O1Visa.two_criteria_insufficient' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh, propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.R2_ComparableEvidence' depends on axioms: [propext, LegalLean.CaseStudies.O1Visa.ComparableEvidenceApplies]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (axiom) 'LegalLean.CaseStudies.O1Visa.HasExtraordinaryAbility' depends on axioms: [LegalLean.CaseStudies.O1Visa.HasExtraordinaryAbility]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.EligibleO1A.part1' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (axiom) 'LegalLean.CaseStudies.O1Visa.HasSustainedAcclaim' depends on axioms: [LegalLean.CaseStudies.O1Visa.HasSustainedAcclaim]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (theorem) 'LegalLean.CaseStudies.O1Visa.judgingRole_ne_scholarlyAuthorship' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.disc_comparable' depends on axioms: [LegalLean.CaseStudies.O1Visa.ComparableEvidenceApplies, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (theorem) 'LegalLean.CaseStudies.O1Visa.defeat_direct_acyclicity' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (axiom) 'LegalLean.CaseStudies.O1Visa.ComparableEvidenceApplies' depends on axioms: [LegalLean.CaseStudies.O1Visa.ComparableEvidenceApplies]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (theorem) 'LegalLean.CaseStudies.O1Visa.empty_list_ineligible' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh, propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.MeetsThreeCriteria.evidence' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (theorem) 'LegalLean.CaseStudies.O1Visa.MeetsThreeCriteria.cardinal' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.vague_acclaim' depends on axioms: [LegalLean.CaseStudies.O1Visa.HasSustainedAcclaim, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (theorem) 'LegalLean.CaseStudies.O1Visa.final_merits_is_boundary' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.EligibleO1A.part2' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.hasQualifyingAward' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.instInhabitedCriterion.default' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.Publication.isRecordedAsMajor' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.hasJudgingRole' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.vague_employment' depends on axioms: [LegalLean.CaseStudies.O1Visa.RoleIsCriticalAtDistinguished, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (axiom) 'LegalLean.CaseStudies.O1Visa.AwardIsRecognised' depends on axioms: [LegalLean.CaseStudies.O1Visa.AwardIsRecognised]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (axiom) 'LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.allDefeats' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.Award.id' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (theorem) 'LegalLean.CaseStudies.O1Visa.OneTimeAchievement.awardIsRecognised' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (axiom) 'LegalLean.CaseStudies.O1Visa.SalaryIsHigh' depends on axioms: [LegalLean.CaseStudies.O1Visa.SalaryIsHigh]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (axiom) 'LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.OneTimeAchievement.adjudicatorDetermination' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (theorem) 'LegalLean.CaseStudies.O1Visa.R1_R2_deontic_distinct' depends on axioms: [propext, LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh, LegalLean.CaseStudies.O1Visa.ComparableEvidenceApplies]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.OneTimeAchievement.award' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.finalMeritsDetermination' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (theorem) 'LegalLean.CaseStudies.O1Visa.eligibility_always_mixed' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion, LegalLean.CaseStudies.O1Visa.MeetsMembershipCriterion, LegalLean.CaseStudies.O1Visa.MeetsMediaCriterion, LegalLean.CaseStudies.O1Visa.MeetsJudgingCriterion, LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, LegalLean.CaseStudies.O1Visa.MeetsScholarlyAuthorshipCriterion, LegalLean.CaseStudies.O1Visa.MeetsCriticalEmploymentCriterion, LegalLean.CaseStudies.O1Visa.SalaryIsHigh, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (def) 'LegalLean.CaseStudies.O1Visa.disc_contribs' depends on axioms: [LegalLean.CaseStudies.O1Visa.ContributionsAreMajor, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.O1Visa] (axiom) 'LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion' depends on axioms: [LegalLean.CaseStudies.O1Visa.MeetsAwardCriterion]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.ContactDetails.hasEmail' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.ServiceContract.consumer' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.Provider.isLicensed' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.CaseStudies.TCPCode] (theorem) 'LegalLean.CaseStudies.TCPCode.non_consumer_contract_outside_cis_scope' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.vague_prominent' depends on axioms: [LegalLean.CaseStudies.TCPCode.ProminentlyPublished, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.CIS.isStandardFormat' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.cisIsCompliant' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.Provider.id' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.vague_direct_costs' depends on axioms: [LegalLean.CaseStudies.TCPCode.IsWithinDirectCosts, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.isDeviceRepaymentFee' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.R2_RenewalExemption' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.R3_DeviceRepaymentCarveout' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.disc_material_change' depends on axioms: [LegalLean.CaseStudies.TCPCode.IsMaterialChange, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.R3_ExcessiveETFProhibited' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.isSmallProvider' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.isRetailConsumerContract' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.ServiceContract.id' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.ServiceContract.isRenewal' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (theorem) 'LegalLean.CaseStudies.TCPCode.defeat_graph_acyclic' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.ContactDetails.hasPhoneNumber' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.CIS.contractId' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.defeat_D3_DeviceRepaymentCarveout_ETFProhibited' depends on axioms: [propext]
+[PASS] [FORMAL] [LegalLean.CaseStudies.TCPCode] (theorem) 'LegalLean.CaseStudies.TCPCode.all_exemptions_yield_boundary' depends on axioms: [propext, Quot.sound]
+[PASS] [FORMAL] [LegalLean.CaseStudies.TCPCode] (theorem) 'LegalLean.CaseStudies.TCPCode.unlicensed_provider_not_subject_to_tcp' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.allDefeats' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.assessETFCompliance' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.isFixedTermContract' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (theorem) 'LegalLean.CaseStudies.TCPCode.all_defeats_are_strict' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.ETF.amountCents' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.defeat_D1_SmallProviderExemption_ContactObligation' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.isExemptRenewal' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (theorem) 'LegalLean.CaseStudies.TCPCode.exemption_rules_outrank_base_rules' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.ETF.isDeviceRepayment' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.ServiceContract.contractType' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (theorem) 'LegalLean.CaseStudies.TCPCode.etf_prohibition_and_carveout_are_deontic_distinct' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.ContactDetails.hasWebsite' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (axiom) 'LegalLean.CaseStudies.TCPCode.UpdatedWithinReasonableTime' depends on axioms: [LegalLean.CaseStudies.TCPCode.UpdatedWithinReasonableTime]
+[PASS] [FORMAL] [LegalLean.CaseStudies.TCPCode] (theorem) 'LegalLean.CaseStudies.TCPCode.small_provider_not_in_obligation_path' depends on axioms: [propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.ServiceContract.hasMaterialChange' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.ContactDetails.hasPostalAddress' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.assessContactCompliance' depends on axioms: [propext]
+[PASS] [FORMAL] [LegalLean.CaseStudies.TCPCode] (theorem) 'LegalLean.CaseStudies.TCPCode.non_compliant_cis_format_is_formal_failure' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.R1_SmallProviderExemption' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.R2_CriticalInfoSummary' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (axiom) 'LegalLean.CaseStudies.TCPCode.ProminentlyPublished' depends on axioms: [LegalLean.CaseStudies.TCPCode.ProminentlyPublished]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.hasCompleteContactDetails' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.ETF.contractId' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.instInhabitedContractType.default' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.isLicensedProvider' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.Consumer.isIndividual' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.defeat_D2_RenewalExemption_CriticalInfoSummary' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.CIS.pageCount' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (theorem) 'LegalLean.CaseStudies.TCPCode.defeat_hierarchy_is_consistent' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.ServiceContract.provider' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.assessCISCompliance' depends on axioms: [propext]
+[PASS] [FORMAL] [LegalLean.CaseStudies.TCPCode] (theorem) 'LegalLean.CaseStudies.TCPCode.small_provider_exemption_defeats_obligation' depends on axioms: [propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.Provider.employeeCount' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (theorem) 'LegalLean.CaseStudies.TCPCode.contact_obligation_and_exemption_are_deontic_distinct' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.R1_ContactObligation' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (axiom) 'LegalLean.CaseStudies.TCPCode.IsMaterialChange' depends on axioms: [LegalLean.CaseStudies.TCPCode.IsMaterialChange]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.Consumer.id' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (axiom) 'LegalLean.CaseStudies.TCPCode.IsWithinDirectCosts' depends on axioms: [LegalLean.CaseStudies.TCPCode.IsWithinDirectCosts]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.TCPCode] (def) 'LegalLean.CaseStudies.TCPCode.vague_reasonable_time' depends on axioms: [LegalLean.CaseStudies.TCPCode.UpdatedWithinReasonableTime, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.mfaConfigSatisfied' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.evaluateMfaControl' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.evaluateTrainingAttestation' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.IamEvidence.mfaRequired' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.R2_RiskAcceptance' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.D2_RiskAcceptanceDefeasCompensating' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (theorem) 'LegalLean.CaseStudies.ComplianceControl.mfa_config_holds_when_flags_set' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.D1_RiskAcceptanceDefeatsMfa' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.vague_mfa_mechanism' depends on axioms: [LegalLean.CaseStudies.ComplianceControl.MfaMechanismIsAppropriate, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (theorem) 'LegalLean.CaseStudies.ComplianceControl.risk_acceptance_is_declared_defeater' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (axiom) 'LegalLean.CaseStudies.ComplianceControl.TrainingIsAdequate' depends on axioms: [LegalLean.CaseStudies.ComplianceControl.TrainingIsAdequate]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.riskAcceptanceActive' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (theorem) 'LegalLean.CaseStudies.ComplianceControl.R1_R2_deontic_distinct' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.R3_CompensatingControl' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (theorem) 'LegalLean.CaseStudies.ComplianceControl.gap_without_acceptance_yields_boundary' depends on axioms: [propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.R1_MfaObligation' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.vague_training' depends on axioms: [LegalLean.CaseStudies.ComplianceControl.TrainingIsAdequate, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.IamEvidence.conditionalAccessEnabled' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.allDefeats' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.IamEvidence.riskAcceptanceOnFile' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.IamEvidence.trainingAttestationExists' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.IamEvidence.mfaMechanism' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (theorem) 'LegalLean.CaseStudies.ComplianceControl.defeat_acyclicity' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (def) 'LegalLean.CaseStudies.ComplianceControl.trainingRecordExists' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (theorem) 'LegalLean.CaseStudies.ComplianceControl.training_evaluation_always_boundary' depends on axioms: [propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (axiom) 'LegalLean.CaseStudies.ComplianceControl.MfaMechanismIsAppropriate' depends on axioms: [LegalLean.CaseStudies.ComplianceControl.MfaMechanismIsAppropriate]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.ComplianceControl] (theorem) 'LegalLean.CaseStudies.ComplianceControl.all_defeats_are_non_strict' depends on axioms: [propext]
+[PASS] [FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) 'LegalLean.CaseStudies.PL.CivilProcedure.hypTimelyEomFiling_deadline_eq_feb28' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.computeSixMonthDeadline' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.evaluateFilingOutcome' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (axiom) 'LegalLean.CaseStudies.PL.CivilProcedure.ExcessiveProceduralFormalism' depends on axioms: [LegalLean.CaseStudies.PL.CivilProcedure.ExcessiveProceduralFormalism]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.assessAdmissibility' depends on axioms: [propext]
+[PASS] [FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) 'LegalLean.CaseStudies.PL.CivilProcedure.restoration_motion_shifts_rejected_to_boundary' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.hypLateFilingNoRestoration' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.isTimely' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.R1_AdmissibleFiling' depends on axioms: [propext]
+[PASS] [FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) 'LegalLean.CaseStudies.PL.CivilProcedure.hypTimelyEomFiling_is_formal' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.ProceduralFiling.filingDate' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.hypUnverifiedProvenanceFiling' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) 'LegalLean.CaseStudies.PL.CivilProcedure.hypLateFilingNoRestoration_is_rejected' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.AdmissibleInSadOkregowy' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) 'LegalLean.CaseStudies.PL.CivilProcedure.party_asserted_provenance_yields_boundary' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.ProceduralFiling.serviceDate' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) 'LegalLean.CaseStudies.PL.CivilProcedure.polish_authorities_have_pl_jurisdiction' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.instDecidableEqProceduralFiling.decEq' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.R3_RestorationArt168' depends on axioms: [propext, LegalLean.CaseStudies.PL.CivilProcedure.MissedDeadlineWithoutFault]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.statutoryDeadlineMonths' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.defeat_Untimely_Admissible' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.vague_art168_lack_of_fault' depends on axioms: [LegalLean.CaseStudies.PL.CivilProcedure.MissedDeadlineWithoutFault, propext]
+[PASS] [FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) 'LegalLean.CaseStudies.PL.CivilProcedure.defeat_graph_acyclic' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.ProceduralFiling.courtFeePaid' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.hypTimelyEomFiling' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.meetsFormalPrerequisites' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.ProceduralFiling.restorationMotionFiled' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.ProceduralFiling.formalRequirementsMet' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.defeat_Restoration_Untimely' depends on axioms: [propext]
+[PASS] [FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) 'LegalLean.CaseStudies.PL.CivilProcedure.general_late_without_restoration_is_rejected' depends on axioms: [propext, Quot.sound]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.disc_echr_art6_access_to_court' depends on axioms: [LegalLean.CaseStudies.PL.CivilProcedure.ExcessiveProceduralFormalism, propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.allDefeats' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.decIsTimely' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.decHasVerifiedProvenance' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (theorem) 'LegalLean.CaseStudies.PL.CivilProcedure.general_timely_verified_is_formal' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.decAdmissibleInSadOkregowy' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.hasVerifiedProvenance' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.decMeetsFormalPrerequisites' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.ProceduralFiling.dateProvenance' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (axiom) 'LegalLean.CaseStudies.PL.CivilProcedure.MissedDeadlineWithoutFault' depends on axioms: [LegalLean.CaseStudies.PL.CivilProcedure.MissedDeadlineWithoutFault]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.R2_UntimelyRejected' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.hypLateFilingWithRestoration' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.mkVerifiedTimelinessEvidence' depends on axioms: [propext]
+[PASS] [NON-FORMAL] [LegalLean.CaseStudies.PL.CivilProcedure] (def) 'LegalLean.CaseStudies.PL.CivilProcedure.ProceduralFiling.id' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.TypeclassConstraint] (theorem) 'TypeclassConstraint.formal_ne_rejected' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.TypeclassConstraint] (theorem) 'TypeclassConstraint.vague_instance_fields_are_metadata' depends on axioms: [TypeclassConstraint.IsReasonable, propext, Quot.sound, Classical.choice]
+[PASS] [NON-FORMAL] [LegalLean.TypeclassConstraint] (def) 'TypeclassConstraint.vagueInstanceGivesBoundaryNotProof' depends on axioms: [TypeclassConstraint.IsReasonable]
+[PASS] [NON-FORMAL] [LegalLean.TypeclassConstraint] (def) 'TypeclassConstraint.vagueHasBoundaryConstructor' depends on axioms: [TypeclassConstraint.IsReasonable]
+[PASS] [FORMAL] [LegalLean.TypeclassConstraint] (def) 'TypeclassConstraint.trueIsFormallyDischargeable' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.TypeclassConstraint] (def) 'TypeclassConstraint.boundaryAvailableForAnyProp' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.TypeclassConstraint] (def) 'TypeclassConstraint.isReasonable_vague' depends on axioms: [TypeclassConstraint.IsReasonable]
+[PASS] [FORMAL] [LegalLean.TypeclassConstraint] (theorem) 'TypeclassConstraint.formal_carries_real_proof' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.TypeclassConstraint] (theorem) 'TypeclassConstraint.formal_constructor_implies_proof' does not depend on any axioms
+[PASS] [FORMAL] [LegalLean.TypeclassConstraint] (theorem) 'TypeclassConstraint.formal_ne_boundary' does not depend on any axioms
+[PASS] [NON-FORMAL] [LegalLean.TypeclassConstraint] (axiom) 'TypeclassConstraint.IsReasonable' depends on axioms: [TypeclassConstraint.IsReasonable]

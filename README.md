@@ -23,10 +23,14 @@ Layer 3: Prose (monograph/)       — Published monograph (generated from both l
 | Type | Purpose |
 |------|---------|
 | `Deontic` | Permitted / prohibited / obligatory |
+| `Authority` / `Jurisdiction` | Adjudicatory bodies (US, Australia, Polish courts `sadNajwyzszy` / `sn`, `trybunalKonstytucyjny` / `tk`, `naczelnySadAdministracyjny` / `nsa`, `sadApelacyjny`, `sadOkregowy`, `sadRejonowy`, `ecthr`, plus extensible `other` / `withJurisdiction`) |
+| `Date` / `CalendarDate` | ISO 8601 calendar dates (`LegalLean.Time`) with `addMonths` end-of-month clamping and ordering lemmas |
 | `LegalRule` | Rule with defeasibility metadata |
-| `EvidenceFor` | Propositions-as-types for legal evidence |
+| `Provenance` | Epistemic status of evidence (`verifiedAgainstSource`, `partyAsserted`, `stipulated`, `officialNotice`) |
+| `EvidenceFor` | Propositions-as-types for legal evidence with `provenance` defaulting to `partyAsserted` |
 | `DefeasiblyHolds` | Non-monotonic entailment (holds unless defeated) |
-| `FormalisationBoundary` | Hart's open texture as a first-class type |
+| `FormalisationBoundary` | Hart's open texture as a first-class type (`formal`, `rejected` / `inadmissible`, `boundary`, `mixed`) |
+| `LegalOutcome` | Proof-carrying outcome (`sustained` with `P`, `rejected` / `inadmissible` with `¬P`, `boundary`, `mixed`) |
 | `RequiresHumanDetermination` | Typeclass marking where formal verification yields to human judgment |
 | `Vague` | Core/penumbra distinction (subclass of RequiresHumanDetermination) |
 | `Discretionary` | Authority discretion (subclass of RequiresHumanDetermination) |
@@ -36,6 +40,23 @@ Layer 3: Prose (monograph/)       — Published monograph (generated from both l
 1. **IRC §163(h)** — Mortgage interest deduction (Lawsky's gold standard). COMPLETE.
 2. **O-1 Visa** — "3 of 8" criteria as dependent types. Stub + research.
 3. **Australian TCP Code** — Regulatory compliance (Governatori comparison). Stub + research.
+4. **InfoSec Compliance Control** — ISO 27001 / SOC 2 MFA control (`LegalLean/CaseStudies/ComplianceControl.lean`).
+5. **Polish Civil Procedure (k.p.c.)** — 6-month calendar-date deadline (Art. 165 § 1 k.p.c. + Art. 112 k.c. with end-of-month clamping), formal rejection (*odrzucenie*), provenance checking, and Art. 168 § 1 k.p.c. restoration before a `sąd okręgowy` on hypothetical facts (`LegalLean/CaseStudies/PL/CivilProcedure.lean`).
+
+## Axiom & Sorry Guard (`axiomguard`)
+
+`lake exe axiomguard` verifies that no audited module depends on `sorryAx` and that every declaration tagged `@[formal_result]` or used as a `formal` / `rejected` / `sustained` outcome depends only on the three standard Lean 4 kernel axioms (`propext`, `Classical.choice`, `Quot.sound`). It also writes a `#print axioms` report file (default `axiom-report.txt`).
+
+```bash
+# Audit the full LegalLean library and write axiom-report.txt
+lake exe axiomguard
+
+# Audit a specific module and write report to a custom path
+lake exe axiomguard LegalLean.CaseStudies.PL.CivilProcedure --report axiom-report.txt
+
+# Audit a downstream Lean file directly
+lake exe axiomguard path/to/DownstreamFile.lean --report downstream-axioms.txt
+```
 
 ## Automated Pipeline
 

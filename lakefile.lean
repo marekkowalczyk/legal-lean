@@ -12,3 +12,8 @@ require mathlib from git
 @[default_target]
 lean_lib «LegalLean» where
   roots := #[`LegalLean]
+
+@[default_target]
+lean_exe «axiomguard» where
+  root := `LegalLean.AxiomGuard
+  supportInterpreter := true

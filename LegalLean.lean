@@ -1,4 +1,6 @@
+import LegalLean.FormalResultAttr
 import LegalLean.Core
+import LegalLean.Time
 import LegalLean.Defeasible
 import LegalLean.Solver
 import LegalLean.IR.Legal
@@ -6,4 +8,6 @@ import LegalLean.CaseStudies.IRC163h
 import LegalLean.CaseStudies.IRC163h.Theorems
 import LegalLean.CaseStudies.O1Visa
 import LegalLean.CaseStudies.TCPCode
+import LegalLean.CaseStudies.ComplianceControl
+import LegalLean.CaseStudies.PL.CivilProcedure
 import LegalLean.TypeclassConstraint

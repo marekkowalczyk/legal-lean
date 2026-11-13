@@ -82,3 +82,18 @@ jobs:
       - name: Lake build
         run: |
           lake build
+
+      - name: Axiom and sorry guard
+        run: |
+          lake exe axiomguard --report axiom-report.txt
+          echo "## Axiom Guard Report" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          head -n 60 axiom-report.txt >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+      - name: Upload axiom report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: axiom-report
+          path: axiom-report.txt
